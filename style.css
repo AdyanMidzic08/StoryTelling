@@ -51,7 +51,7 @@ body {
     font-family: pokemon-text;
     color: white;
     font-size: 7rem;
-    margin: 0 0 2rem 0; /* Abstand nach unten */
+    margin: 0 0 2rem 0;
 }
 
 #startStory h3 {
@@ -73,8 +73,6 @@ body {
     text-align: center;
 
 }
-
-/*color:#E2A2A5*/
 
 .button {
     width: 30%;
@@ -105,19 +103,19 @@ body {
 
 .story-box {
     width: 60%;
-    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    background: rgba(255, 255, 255, 0.9);
     border: 5px solid #62BC97;
     border-radius: 15px;
     padding: 2rem;
-    margin: 35vh auto; /* Mehr Abstand nach oben und unten */
+    margin: 35vh auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy transition */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
-    overflow: visible; /* Damit Pikachu sichtbar ist */
+    overflow: visible;
 }
 
 .story-box:hover {
@@ -126,7 +124,6 @@ body {
     border-color: #E2A2A5;
 }
 
-/* Dekoratives Element im Hintergrund */
 .story-box::before {
     content: '';
     position: absolute;
@@ -147,7 +144,7 @@ body {
 .story-box h2 {
     font-family: pokemon-text;
     font-size: 3rem;
-    color: #E2A2A5; /* Akzentfarbe */
+    color: #E2A2A5;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 0px #fff;
     transition: transform 0.3s ease;
@@ -183,7 +180,6 @@ body {
 #Banner {
     width: 100%;
     height: 15vh;
-    /* background-color: #86684B;  Alte Farbe entfernt */
     margin: 0;
     display: flex;
     justify-content: center;
@@ -191,7 +187,6 @@ body {
     user-select: none;
 }
 
-/* Neue Klasse für besseres Design */
 .hero-banner {
     background: linear-gradient(135deg, rgba(98, 188, 151, 0.95) 0%, rgba(226, 162, 165, 0.95) 100%);
     border-bottom: 4px solid white;
@@ -201,7 +196,6 @@ body {
     overflow: hidden;
 }
 
-/* Glanz-Effekt */
 .hero-banner::after {
     content: '';
     position: absolute;
@@ -240,7 +234,6 @@ body {
     margin-top: 45%;
 }
 
-/* Kleine Frequenz-Animation unter dem Banner */
 .freq-container {
     position: fixed;
     bottom: 0;

@@ -3,7 +3,6 @@ let output = document.getElementById('output');
 let storyOutput = document.getElementById('MainStory');
 let music = null;
 
-//Audio Elemnte
 let backgroundAudio = new Audio("./Audio/Background.mp3");
 
 function clearScreen() {
@@ -98,15 +97,12 @@ let isMuted = false;
 function toggleMute() {
     isMuted = !isMuted;
     
-    // Background Audio Mute
     if(backgroundAudio) backgroundAudio.muted = isMuted;
 
-    // Story Box Audio Mute
     document.querySelectorAll("audio").forEach(audio => {
         audio.muted = isMuted;
     });
 
-    // Button Visual Feedback
     let btn = document.getElementById("muteBtn");
     if(btn) {
         if(isMuted) {
@@ -173,7 +169,6 @@ function loadGSAP(music) {
             }
         );
 
-        // Animation für das Dekorationselement (falls vorhanden)
         let deco = panel.querySelector(".decoration-img");
         if(deco) {
             tl.fromTo(deco, 
@@ -184,18 +179,17 @@ function loadGSAP(music) {
         }
 
         tl.to(panel, {
-            duration: 5 // Box bleibt stabil sichtbar
+            duration: 5 
         })
         .to(panel, {
             opacity: 0,
             scale: 0.5,
             y: -100,
             rotation: -rotStart,
-            duration: 4, // sanftes Outro, mehr Zeit gegen schnelles Scrollen
+            duration: 4, 
             ease: "power1.inOut"
         });
 
-        // Audio Logic: Wenn Box Audio hat, Background pausieren und Box-Audio abspielen
         let boxAudio = panel.querySelector("audio");
         if (boxAudio) {
             ScrollTrigger.create({
