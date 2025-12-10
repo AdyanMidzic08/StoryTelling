@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokmon</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+    <script src="./JSON/storys.js" defer></script>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="output">
+
+    <video autoplay muted loop playsinline id="bg-video">
+      <source src="./Video/Pokemon Diamond and Pearl.mp4" type="video/mp4">
+    </video>
+
+      <h1 class="headline">Story Telling <br> Pokemon</h1>
+      <div id="startStory">
+          <h3 id="storyHeadline">Willst du eine Geschichte hören?</h3>
+          <div id="buttons">
+              <div class="button" id="noMusic">Mit Keiner Musik?</div>
+              <div class="button" id="music">Mit Musik?</div>
+          </div>
+      </div>
+  </div>
+
+  <div id="MainStory"></div>
+</body>
+</html>

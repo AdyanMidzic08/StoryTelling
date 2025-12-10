@@ -1,0 +1,367 @@
+@font-face {
+    font-family: pokemon-pixel;
+    src: url(./Fonts/Pokemon\ X\ and\ Y.ttf);
+}
+
+@font-face {
+    font-family: pokemon-text;
+    src: url(./Fonts/Ketchum.otf);
+}
+
+body {
+    background-image: url(./Images/background.jpg);
+    background-size: cover;   
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; 
+    margin: 0;
+}
+
+#output {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#startStory {
+    width: 35%;
+    height: 35vh;
+    border-radius: 10px;
+    padding: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    user-select: none;
+}
+
+.headline {
+    text-align: center;
+    font-family: pokemon-text;
+    color: white;
+    font-size: 7rem;
+    margin: 0 0 2rem 0; /* Abstand nach unten */
+}
+
+#startStory h3 {
+    text-align: center;
+    font-family: pokemon-pixel;
+    font-size: 1rem;
+    margin: 0;
+    color: #E2A2A5;
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: auto; 
+    gap: 20%;
+    width: 100%;
+    height: 10vh;
+    justify-items: center;
+    margin-top: 10%;
+    text-align: center;
+
+}
+
+/*color:#E2A2A5*/
+
+.button {
+    width: 30%;
+    height: 4vh;
+    background-color: peru;  
+    border-radius: 2%; 
+    font-family: pokemon-pixel;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%; 
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: #E2A2A5;
+    transform: scale(1.05);
+    border: white 2px solid;
+}
+
+#startStory h3 {
+    font-size: 3rem;
+}
+
+
+.story-box {
+    width: 60%;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    border: 5px solid #62BC97;
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 35vh auto; /* Mehr Abstand nach oben und unten */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy transition */
+    position: relative;
+    overflow: visible; /* Damit Pikachu sichtbar ist */
+}
+
+.story-box:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    border-color: #E2A2A5;
+}
+
+/* Dekoratives Element im Hintergrund */
+.story-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(226, 162, 165, 0.1) 0%, rgba(255,255,255,0) 70%);
+    transform: rotate(0deg);
+    transition: transform 0.8s ease;
+    z-index: -1;
+}
+
+.story-box:hover::before {
+    transform: rotate(180deg);
+}
+
+.story-box h2 {
+    font-family: pokemon-text;
+    font-size: 3rem;
+    color: #E2A2A5; /* Akzentfarbe */
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 0px #fff;
+    transition: transform 0.3s ease;
+}
+
+.story-box:hover h2 {
+    transform: scale(1.1);
+    color: #62BC97;
+}
+
+.story-box img {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    transition: all 0.5s ease;
+}
+
+.story-box:hover img {
+    transform: rotate(2deg) scale(1.03);
+    border-color: #E2A2A5;
+}
+
+.story-box p {
+    font-family: pokemon-pixel;
+    font-size: 1.8rem;
+    color: #333;
+    line-height: 1.5;
+    max-width: 90%;
+}
+
+#Banner {
+    width: 100%;
+    height: 15vh;
+    /* background-color: #86684B;  Alte Farbe entfernt */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+/* Neue Klasse für besseres Design */
+.hero-banner {
+    background: linear-gradient(135deg, rgba(98, 188, 151, 0.95) 0%, rgba(226, 162, 165, 0.95) 100%);
+    border-bottom: 4px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glanz-Effekt */
+.hero-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+    transform: skewX(-25deg);
+    animation: shine 6s infinite;
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    20% { left: 200%; }
+    100% { left: 200%; }
+}
+
+#Banner h1 {
+    margin: 0;
+    font-family: pokemon-text;
+    color: white;
+    font-size: 4rem;
+    text-shadow: 4px 4px 0px #E2A2A5, 8px 8px 10px rgba(0,0,0,0.2);
+    letter-spacing: 3px;
+    z-index: 1;
+    animation: floatText 3s ease-in-out infinite;
+}
+
+@keyframes floatText {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+#CardsOutput {
+    margin-top: 45%;
+}
+
+/* Kleine Frequenz-Animation unter dem Banner */
+.freq-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    padding: 14px 0 28px 0;
+    z-index: 1;
+}
+
+.freq-container .bar {
+    width: 2vw;
+    height: 7vh;
+    background: linear-gradient(180deg, #E2A2A5 0%, #62BC97 100%);
+    border-radius: 4px;
+    animation: barPulse 1.3s ease-in-out infinite;
+    animation-delay: var(--d);
+    opacity: 0.9;
+    box-shadow: 0 0 6px rgba(0,0,0,0.25);
+}
+
+@keyframes barPulse {
+    0% { transform: scaleY(0.4); opacity: 0.6; }
+    20% { transform: scaleY(1.1); opacity: 1; }
+    50% { transform: scaleY(0.6); opacity: 0.8; }
+    80% { transform: scaleY(1.0); opacity: 1; }
+    100% { transform: scaleY(0.4); opacity: 0.6; }
+}
+
+.audio-colum {
+    width: 100%;
+    margin-top: 1.5rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.audio-colum::-webkit-media-controls-panel {
+    background: linear-gradient(180deg, #E2A2A5 0%, #62BC97 100%);
+    color: white;
+}
+
+.audio-colum::-webkit-media-controls-play-button,
+.audio-colum::-webkit-media-controls-mute-button {
+    filter: invert(1);
+}
+
+.decoration-img {
+    position: absolute;
+    top: -200px;
+    right: -250px;
+    width: 100px;
+    height: 100px;
+    z-index: -10;
+    filter: drop-shadow(0 8px 12px rgba(0,0,0,0.4));
+    transition: transform 0.3s ease;
+}
+
+.story-box:hover {
+    transform: rotate(-15deg) scale(1.1);
+}
+
+.playButton {
+    width: 7vw;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 0.3s ease;
+    animation: rotateButton 3s linear infinite;
+}
+
+@keyframes rotateButton {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.panel__audio-label {
+    opacity: 0;
+    width: 100%;
+}
+
+.panel__audio {
+    width: 80%;
+}
+
+.reload-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-family: pokemon-pixel;
+    font-size: 1.5rem;
+    color: white;
+    background: linear-gradient(180deg, #FF0000 50%, #FFFFFF 50%);
+    border: 4px solid #333;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+    text-shadow: 2px 2px 0 #000;
+}
+
+.reload-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+.reload-button:active {
+    transform: scale(0.95);
+}
+
+#EndBanner {
+    width: 100%;
+    height: 20vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    font-family: pokemon-text;
+    color: white;
+}
