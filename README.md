@@ -4,8 +4,8 @@ Ein interaktives Storytelling-Erlebnis, das den Nutzer durch eine spannende Pok�
 
 ## 🔗 Links
 
-- **Live Demo:** [HIER_WEBSITE_LINK_EINFÜGEN](https://deine-website.com)
-- **Repository:** [HIER_REPO_LINK_EINFÜGEN](https://github.com/AdyanMidzic08/StoryTelling)
+- **Live Demo:** [WEBSITE](https://deine-website.com)
+- **Repository:** [REPO](https://github.com/AdyanMidzic08/StoryTelling)
 
 ## ✨ Features
 
